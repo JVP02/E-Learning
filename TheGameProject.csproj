@@ -1,0 +1,1015 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1DBD79B-60A6-44DC-9D1D-67C0ACCBDB87}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TheGameProject</RootNamespace>
+    <AssemblyName>TheGameProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackgroundMusic.cs" />
+    <Compile Include="Collection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collection.Designer.cs">
+      <DependentUpon>Collection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Combat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Combat.Designer.cs">
+      <DependentUpon>Combat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="DevSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevSettings.Designer.cs">
+      <DependentUpon>DevSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gacha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gacha.Designer.cs">
+      <DependentUpon>Gacha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory2.Designer.cs">
+      <DependentUpon>Inventory2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level.Designer.cs">
+      <DependentUpon>Level.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Map.Designer.cs">
+      <DependentUpon>Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Party.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Party.Designer.cs">
+      <DependentUpon>Party.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quiz.Designer.cs">
+      <DependentUpon>Quiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SharedArray.cs" />
+    <Compile Include="Shop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop.Designer.cs">
+      <DependentUpon>Shop.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Collection.resx">
+      <DependentUpon>Collection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Combat.resx">
+      <DependentUpon>Combat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevSettings.resx">
+      <DependentUpon>DevSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gacha.resx">
+      <DependentUpon>Gacha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory2.resx">
+      <DependentUpon>Inventory2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level.resx">
+      <DependentUpon>Level.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Map.resx">
+      <DependentUpon>Map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Party.resx">
+      <DependentUpon>Party.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Quiz.resx">
+      <DependentUpon>Quiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop.resx">
+      <DependentUpon>Shop.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\373053059_213271908393799_1753646022321207387_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\417615354_365155572925857_9006870714256188638_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\457580943_424714313423239_7804011815136574404_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\457651452_1235687697370029_6777011340251531366_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\457745397_2216326772077742_1282899953415372013_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dome.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RayGun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Regen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Regen2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Regen3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashArt1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashArt2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mountbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forestbbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bakunawa.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witch1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manananggal1 %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainheroidle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyanakidle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eff1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atk1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atk2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atk3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i3.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ult1.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ult1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ultsound1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eff2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClosedWaypoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InventoryIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MapIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenWaypoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PartySetupIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PartyBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levelInfoBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroommystic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mystic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scarynight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scarynightv2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phmap3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ph1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ph2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1729213308934-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1729213336461-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1729212871690-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KingsKnight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArcherAtk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArcherIdle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KnighAtk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KnightIdle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mysthicbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1729254266224-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1729254271223-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KnightEff.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArcherEff.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balasiong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bicuco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\binakuko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kampilanbolo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invBg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArcherIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KnightIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TanjiroIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhiteBeardIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YujiIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhiteBeardSkill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732090945834-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732090949565-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732090953288-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732090961022-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732090967433-removebg-preview %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732090971124-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732091043175-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732091119698-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732091208048-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\story1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\story1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char1Atk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char1Idle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char2Atk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char2Idle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Healer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AngelSlash.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732228358325-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732228408292-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732228425804-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732228465243-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732228487093-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732228505757-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732228591495-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1732228443901-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ph250x250.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invBG1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewspaperBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charPlaceholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ph1500x500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollWood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invWood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PartyWoodwBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LevelWood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LevelInfoWood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quezon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quezon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PartyWood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewspaperBG2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EquipIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreatureSelectCollection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ItemSelectCollection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baku.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baku1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baku2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bakuAtk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bakuAtk1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bakuAtk2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mana.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mana1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mana2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manaAtk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manaAtk1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manaAtk2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mangku.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mangku1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mangku2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mangkuAtk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mangkuAtk1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mangkuAtk2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mer1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mer2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merAtk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merAtk1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merAtk2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sprite-0002hook.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tikb.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tikb1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tikb2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tikbAtk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tikbAtk1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tikbAtk2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyan1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyan2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyanAtk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyanAtk1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyanAtk2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bakuIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bakuIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bakuIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manaIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manaIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manaIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mangkuIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mangkuIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mangkuIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tikbIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tikbIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tikbIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyanIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyanIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyanIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manananggal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sirena1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sirena2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tikbalang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tikbalang1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\makima.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mangkukulam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amulet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crucifix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WoodStick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bakunawa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bakunawa1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyanak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyanak1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manananggal1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dagger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Santelmo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Talisman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amulet1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amulet2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gong1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gong2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\santelmo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\santelmo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spear.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spear2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woodsteak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woodsteak1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dagger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dagger1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\net1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\net2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crucifix1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crucifix2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salt1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salt2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConfirmIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ocean1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Draft\" />
+    <Folder Include="Resources\QA\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChoiceQuiz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CorrectQuiz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WrongQuiz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuizBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuizWood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KE.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LClearNotif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LFailedNotif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1733699461326-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1733699480613-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1733699497527-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ei_1733699513807-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gagamIdle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\machIdle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bagIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capbarIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darnaIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\machIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gagamIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bagIdle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capbarIdle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darnaIdle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameBG.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MangkuStory.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SirenaStory.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bagAtk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darnaAtk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gagamAtk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ultSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemSFX.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemSFX1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemSFX2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\machAtk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darnaEff.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bagEff.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bagUlt.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darnaUlt.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capbarSkill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gagamSkill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capbarUlt.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
